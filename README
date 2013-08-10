@@ -1,0 +1,5 @@
+This is the very, very classic MSDOS game Vampire's Castle 
+(aka Vampire.bas) implemented as a Java servlet. This repo
+contains the source for the web controller and view files. 
+The source for the model is in the JavaVampire project 
+(https://github.com/creekfish/JavaVampire).
