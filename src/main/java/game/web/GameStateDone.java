@@ -11,6 +11,7 @@ public class GameStateDone extends GameState {
 		
 	@Override
 	public TurnResult takeTurn(GameContext context) {
+		validateContext(context);
 		TextGame textGame = context.getGame();
 		String action = context.getAction().toString();
 		String output = "";

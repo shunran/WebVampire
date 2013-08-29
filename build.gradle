@@ -4,7 +4,7 @@ apply plugin: 'war'
 //apply plugin: 'git-dependencies'
 
 sourceCompatibility = 1.5
-version = '0.02'
+version = '0.03'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Web Vampire', 'Implementation-Version': version

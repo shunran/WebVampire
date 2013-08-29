@@ -29,7 +29,7 @@ public class WebController extends HttpServlet {
     	TextGame gameModel = null;
     	GameStates stateModel = null;
     	GameState gameState = null;
-    	if (session.isNew())
+    	if (session.isNew()) 
     	{
     		// initialize the model and state of the game
     		gameModel = new Vampire();
@@ -56,8 +56,13 @@ public class WebController extends HttpServlet {
     	}
     	
     	String action = req.getParameter("action");
-    	if (action != null && action != "") {
+    	if (action != null && action != "") 
+    	{
     		action = action.toLowerCase();
+    	}
+    	else
+    	{
+    		action = "look";  // default to "look" action
     	}
     	
     	resp.setContentType("text/html");
@@ -67,16 +72,25 @@ public class WebController extends HttpServlet {
 	    out.println("<HTML>");
 	    out.println("<HEAD><TITLE>Vampire</TITLE></HEAD>");
 	    out.println("<BODY>");
-
+	    
 	    GameContext context = new GameContext(gameModel, new ActionBasic(action));
-    	TurnResult turnResult = gameState.takeTurn(context);
-    	prompt(turnResult.getOutput());
-    	gameState = (GameState) turnResult.getNextState();
-    	
-		// save modified model and state in the session
-		session.setAttribute("gameModel", gameModel);
-		session.setAttribute("gameState", gameState);
-    	
+	    try
+	    {
+	    	TurnResult turnResult = gameState.takeTurn(context);
+	
+	    	prompt(turnResult.getOutput());
+		    gameState = (GameState) turnResult.getNextState();
+			
+		    // save modified model and state in the session
+			session.setAttribute("gameModel", gameModel);
+			session.setAttribute("gameState", gameState);
+	    }
+	    catch (IllegalArgumentException e)
+	    {
+	    	// context was invalid somehow, report the problem and skip turn
+	    	prompt("Something odd happened that cannot be explained... try again.");
+	    }
+    	    	
 	    out.println("</BODY></HTML>");		
 	}
 
