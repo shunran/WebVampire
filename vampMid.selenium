@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>vampMid</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">vampMid</td></tr>
+</thead><tbody>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>climb rope</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>get oar</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>s</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>get holywater</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>bucket</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>u</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>w</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>drop holywater</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>hit fireplace</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>hammer</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>drop bucket</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>go fireplace</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>get torch</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>N</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>W</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>l rat</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>get key</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>E</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=action</td>
+	<td>N</td>
+</tr>
+<tr>
+	<td>submitAndWait</td>
+	<td>xpath=//form</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
