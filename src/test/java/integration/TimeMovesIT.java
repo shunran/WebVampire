@@ -30,10 +30,8 @@ public class TimeMovesIT extends SeleniumBase {
 	driver.findElement(By.xpath("//form")).submit();
 	String timeValue2 = driver.findElement(By.xpath("//body")).getText();
 	timeValue2 = timeValue2.replaceFirst("(?s)The time is (\\d{2}:\\d{2}).*$", "$1");
-	System.out.println(timeValue1);
-	System.out.println(timeValue2);
 	assertEquals(timeValue1.length(),5);
-	assertEquals(timeValue1.length(),5);
+	assertEquals(timeValue2.length(),5);
 	assertFalse(timeValue1.equals(timeValue2));
   }
 
