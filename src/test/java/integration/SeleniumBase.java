@@ -1,10 +1,9 @@
+package integration;
+
 import static org.junit.Assert.fail;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
@@ -12,13 +11,12 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class HappyPath {
-  private WebDriver driver;
-  private String baseUrl;
-  private boolean acceptNextAlert = true;
-  private StringBuffer verificationErrors = new StringBuffer();
+public abstract class SeleniumBase {
+  protected WebDriver driver;
+  protected String baseUrl;
+  protected boolean acceptNextAlert = true;
+  protected StringBuffer verificationErrors = new StringBuffer();
 
-  @Before
   public void setUp() throws Exception {
     driver = new FirefoxDriver();
     baseUrl = "http://localhost:8080/vampire/";
@@ -26,14 +24,7 @@ public class HappyPath {
     driver.get(baseUrl);
   }
 
-  @Test
-  public void testHappyPath() throws Exception {
-	  testVampStart();
-	  testVampMid();
-	  testVampEnd();
-	  
-  }
-  private void testVampStart() throws Exception {
+  protected void testVampStart() throws Exception {
     driver.findElement(By.name("action")).clear();
     driver.findElement(By.name("action")).sendKeys("n");
     driver.findElement(By.xpath("//form")).submit();
@@ -99,7 +90,7 @@ public class HappyPath {
     driver.findElement(By.xpath("//form")).submit();
   }
   
-  private void testVampMid() throws Exception {
+  protected void testVampMid() throws Exception {
 	    driver.findElement(By.name("action")).clear();
 	    driver.findElement(By.name("action")).sendKeys("climb rope");
 	    driver.findElement(By.xpath("//form")).submit();
@@ -165,7 +156,7 @@ public class HappyPath {
 	    driver.findElement(By.xpath("//form")).submit();
 	  }
   
-  private void testVampEnd() throws Exception {
+  protected void testVampEnd() throws Exception {
 	    driver.findElement(By.name("action")).clear();
 	    driver.findElement(By.name("action")).sendKeys("go boat");
 	    driver.findElement(By.xpath("//form")).submit();
@@ -223,19 +214,8 @@ public class HappyPath {
 	    driver.findElement(By.name("action")).clear();
 	    driver.findElement(By.name("action")).sendKeys("n");
 	    driver.findElement(By.xpath("//form")).submit();
-	    driver.findElement(By.name("action")).clear();
-	    driver.findElement(By.name("action")).sendKeys("open coffin");
-	    driver.findElement(By.xpath("//form")).submit();
-	    driver.findElement(By.name("action")).clear();
-	    driver.findElement(By.name("action")).sendKeys("kill vampire");
-	    driver.findElement(By.xpath("//form")).submit();
-	    driver.findElement(By.name("action")).clear();
-	    driver.findElement(By.name("action")).sendKeys("stakes");
-	    driver.findElement(By.xpath("//form")).submit();
-	    driver.getPageSource().contains("Congratulations!");
 	  }
 
-  @After
   public void tearDown() throws Exception {
     driver.quit();
     String verificationErrorString = verificationErrors.toString();
@@ -244,7 +224,7 @@ public class HappyPath {
     }
   }
 
-  private boolean isElementPresent(By by) {
+  protected boolean isElementPresent(By by) {
     try {
       driver.findElement(by);
       return true;
@@ -253,7 +233,7 @@ public class HappyPath {
     }
   }
 
-  private boolean isAlertPresent() {
+  protected boolean isAlertPresent() {
     try {
       driver.switchTo().alert();
       return true;
@@ -262,7 +242,7 @@ public class HappyPath {
     }
   }
 
-  private String closeAlertAndGetItsText() {
+  protected String closeAlertAndGetItsText() {
     try {
       Alert alert = driver.switchTo().alert();
       String alertText = alert.getText();
