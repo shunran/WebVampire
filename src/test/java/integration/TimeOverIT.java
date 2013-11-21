@@ -38,7 +38,6 @@ public class TimeOverIT extends SeleniumBase {
 		String timeValue = driver.findElement(By.xpath("//body")).getText();
 		timeValue = timeValue.replaceFirst("(?s)The time is (\\d{2}:\\d{2}).*$", "$1");
 		if (timeValue.length() != 5) {
-			System.out.println(driver.findElement(By.xpath("//body")).getText());
 			assertTrue(timeValue.matches("(?s).*It's midnight.*"));
 			return;
 		}
