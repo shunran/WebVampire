@@ -10,7 +10,7 @@ public class Tower extends PlaceGeneric {
 	public Tower(Game game)  throws ActionException {
 		super("Tower", "");
 		this.game = game;
-		this.moveItemHere(this.game.getItem("_parapets"));
+		this.moveItemHere(this.game.getItem("parapets"));
 		this.moveItemHere(this.game.getItem("hammer"));
 	}
 }

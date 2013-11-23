@@ -63,13 +63,13 @@ public abstract class SeleniumBase {
     driver.findElement(By.xpath("//form")).submit();
     driver.findElement(By.name("action")).sendKeys("get hammer");
     driver.findElement(By.xpath("//form")).submit();
-    driver.findElement(By.name("action")).sendKeys("tie rope");
-    driver.findElement(By.xpath("//form")).submit();
-    driver.findElement(By.name("action")).sendKeys("parapets");
-    driver.findElement(By.xpath("//form")).submit();
   }
   
   protected void testVampMid() throws Exception {
+	    driver.findElement(By.name("action")).sendKeys("tie rope");
+	    driver.findElement(By.xpath("//form")).submit();
+	    driver.findElement(By.name("action")).sendKeys("parapets");
+	    driver.findElement(By.xpath("//form")).submit();
 	    driver.findElement(By.name("action")).sendKeys("climb rope");
 	    driver.findElement(By.xpath("//form")).submit();
 	    driver.findElement(By.name("action")).sendKeys("get oar");

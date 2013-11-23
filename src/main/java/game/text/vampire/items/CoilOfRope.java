@@ -36,8 +36,7 @@ public class CoilOfRope extends ItemGeneric {
 				if (CoilOfRope.this.getData("tied") == null) {  // if rope is not already tied
 					// NOTE: it's a flaw in the original game that you can tie the rope to the parapets from anywhere!
 					if (((Player) actor).getLocation() == game.getPlace("tower")) {
-						if (game.matchItem("_"+feedback) == game.getItem("_parapets")) {
-							game.getItem("_parapets").changeName("Rope tied to the Parapet");  // the parapets get a new "look"
+							game.getItem("parapets").changeName("Rope tied to the Parapet");  // the parapets get a new "look"
 							try {
 								((Player) actor).drop(CoilOfRope.this);  // coil of rope is dropped to climb
 								CoilOfRope.this.setData("tied", new Boolean(true));  // mark the rope as tied
@@ -46,7 +45,6 @@ public class CoilOfRope extends ItemGeneric {
 							} catch (ActionException e) {
 								return new ResultGeneric(false, e.getMessage());												
 							}
-						}
 					}
 					return new ResultGeneric(false, "You can't do that\n");
 				} else {

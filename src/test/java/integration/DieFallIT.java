@@ -4,8 +4,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
-public class GetDropIT extends SeleniumBase {
+/**
+ * FN13
+ */
+public class DieFallIT extends SeleniumBase {
 
 
   @Before
@@ -17,18 +19,15 @@ public class GetDropIT extends SeleniumBase {
   public void testGetDrop() throws Exception {
 	driver.findElement(By.name("action")).sendKeys("n");
 	driver.findElement(By.xpath("//form")).submit();
-	driver.findElement(By.name("action")).sendKeys("w");
+	driver.findElement(By.name("action")).sendKeys("e");
 	driver.findElement(By.xpath("//form")).submit();
-	driver.findElement(By.name("action")).sendKeys("take wine");
+	driver.findElement(By.name("action")).sendKeys("e");
 	driver.findElement(By.xpath("//form")).submit();
-	driver.findElement(By.name("action")).sendKeys("inventory");
+	driver.findElement(By.name("action")).sendKeys("e");
 	driver.findElement(By.xpath("//form")).submit();
-	driver.getPageSource().contains("Wine");
-	driver.findElement(By.name("action")).sendKeys("drop wine");
+	driver.findElement(By.name("action")).sendKeys("climb parapets");
 	driver.findElement(By.xpath("//form")).submit();
-	driver.findElement(By.name("action")).sendKeys("look");
-	driver.findElement(By.xpath("//form")).submit();
-	driver.getPageSource().contains("Wine");
+	driver.getPageSource().contains("You fell and Died");
   }
 
   @After

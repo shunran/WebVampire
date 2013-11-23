@@ -206,7 +206,7 @@ public class Vampire extends TextGameSinglePlayer {
 		game.addItem(new Rat(game));
 		game.addItem(new Key(game));
 		game.addItem(new Holywater(game));
-		game.addItem("_parapets", new Parapets(game));  // no direct reference to parapets as game item
+		game.addItem(new Parapets(game)); 
 		game.addItem(new SledgeHammer(game));
 		game.addItem("rope", new CoilOfRope(game));
 		game.addItem("_boat", new Boat(game));   // no direct reference to boat as game item ("boat" is a place)

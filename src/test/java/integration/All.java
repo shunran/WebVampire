@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 
 @RunWith(Suite.class)
-@SuiteClasses({ HappyPathIT.class, KillFailIT.class, InstructionIT.class})
+@SuiteClasses({ HappyPathIT.class, DieKillFailIT.class, InstructionIT.class})
 public class All {
 
 }

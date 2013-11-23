@@ -102,7 +102,7 @@ public class VampireTest {
 	@Test
 	public void testTieRopeToParapetsAndGoDown() {
 		Vampire game = start();
-		game.getItem("rope").setData("tied", game.getItem("_parapets"));
+		game.getItem("rope").setData("tied", game.getItem("parapets"));
 		assertNotNull("Could not tie the Coil of Rope to Parapets in the Tower",
 				game.getItem("rope").getData("tied"));
 		Player player = game.getPlayer();

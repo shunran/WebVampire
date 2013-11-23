@@ -4,8 +4,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-// FN4
-public class HappyPathIT extends SeleniumBase {
+/**
+ * FN7
+ */
+public class InvFullIT extends SeleniumBase {
 
 
   @Before
@@ -16,17 +18,19 @@ public class HappyPathIT extends SeleniumBase {
   @Test
 	public void testHappyPath() throws Exception {
 		testVampStart();
-		testVampMid();
-		testVampEnd();
-		driver.findElement(By.name("action")).sendKeys("open coffin");
+		driver.findElement(By.name("action")).sendKeys("w");
 		driver.findElement(By.xpath("//form")).submit();
 		driver.findElement(By.name("action")).clear();
-		driver.findElement(By.name("action")).sendKeys("kill vampire");
+		driver.findElement(By.name("action")).sendKeys("w");
 		driver.findElement(By.xpath("//form")).submit();
 		driver.findElement(By.name("action")).clear();
-		driver.findElement(By.name("action")).sendKeys("stakes");
+		driver.findElement(By.name("action")).sendKeys("get scroll");
 		driver.findElement(By.xpath("//form")).submit();
-		driver.getPageSource().contains("Congratulations!");
+		driver.findElement(By.name("action")).sendKeys("w");
+		driver.findElement(By.xpath("//form")).submit();
+		driver.findElement(By.name("action")).sendKeys("get timepiece");
+		driver.findElement(By.xpath("//form")).submit();
+		driver.getPageSource().contains("You can't carry any more");
 	}
 
   @After

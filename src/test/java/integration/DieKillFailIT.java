@@ -4,8 +4,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-
-public class KillFailIT extends SeleniumBase {
+/**
+ * FN8
+ */
+public class DieKillFailIT extends SeleniumBase {
 
 
   @Before
