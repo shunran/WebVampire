@@ -68,9 +68,10 @@ public class WebController extends HttpServlet {
     	resp.setContentType("text/html");
 	    
 	    out = resp.getWriter();
-
+	    out.println("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">");
 	    out.println("<HTML>");
-	    out.println("<HEAD><TITLE>Vampire</TITLE></HEAD>");
+	    out.println("<HEAD><META http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">");
+	    out.println("<TITLE>Vampire</TITLE></HEAD>");
 	    out.println("<BODY>");
 	    
 	    GameContext context = new GameContext(gameModel, new ActionBasic(action));
@@ -103,7 +104,7 @@ public class WebController extends HttpServlet {
 	protected void prompt(String msg) {
 		output(msg);
 		
-		out.println("<form action=\"\" method=\"get\">");
+		out.println("<form action=\"#\" method=\"get\">");
 		out.println("	<input name=\"action\" type=\"text\">");
 		out.println("</form>");
 	}
